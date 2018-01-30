@@ -18,6 +18,7 @@ const Main = styled.div`
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  position: relative;
 `;
 const BackgroundWrap = styled.div`
   bottom: 0;
@@ -138,11 +139,25 @@ const X5 = styled.div`
   -moz-transform: scale(0.55);
   transform: scale(0.55);
 `;
+const Body = styled.div`
+  z-index: 21;
+  background: white;
+  border: 10px solid black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+`;
 
 export default class LandingPage extends Component {
   render() {
     return (
       <Main>
+        <Body />
         <BackgroundWrap>
           <X1>
             <Cloud />

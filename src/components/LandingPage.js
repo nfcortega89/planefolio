@@ -97,18 +97,18 @@ const X1 = styled.div`
   -moz-animation: ${animateCloud} 35s linear infinite;
   animation: ${animateCloud} 35s linear infinite;
 
-  -webkit-transform: scale(0.65);
-  -moz-transform: scale(0.65);
-  transform: scale(0.65);
+  -webkit-transform: scale(0.35);
+  -moz-transform: scale(0.35);
+  transform: scale(0.35);
 `;
 const X2 = styled.div`
   -webkit-animation: ${animateCloud} 20s linear infinite;
   -moz-animation: ${animateCloud} 20s linear infinite;
   animation: ${animateCloud} 20s linear infinite;
 
-  -webkit-transform: scale(0.3);
-  -moz-transform: scale(0.3);
-  transform: scale(0.3);
+  -webkit-transform: scale(0.55);
+  -moz-transform: scale(0.55);
+  transform: scale(0.55);
 `;
 
 const X3 = styled.div`
@@ -116,9 +116,9 @@ const X3 = styled.div`
   -moz-animation: ${animateCloud} 30s linear infinite;
   animation: ${animateCloud} 30s linear infinite;
 
-  -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  transform: scale(0.5);
+  -webkit-transform: scale(0.35);
+  -moz-transform: scale(0.35);
+  transform: scale(0.35);
 `;
 
 const X4 = styled.div`
@@ -126,18 +126,18 @@ const X4 = styled.div`
   -moz-animation: ${animateCloud} 18s linear infinite;
   animation: ${animateCloud} 18s linear infinite;
 
-  -webkit-transform: scale(0.4);
-  -moz-transform: scale(0.4);
-  transform: scale(0.4);
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
 `;
 const X5 = styled.div`
   -webkit-animation: ${animateCloud} 25s linear infinite;
   -moz-animation: ${animateCloud} 25s linear infinite;
   animation: ${animateCloud} 25s linear infinite;
 
-  -webkit-transform: scale(0.55);
-  -moz-transform: scale(0.55);
-  transform: scale(0.55);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
 `;
 const Body = styled.div`
   z-index: 21;
@@ -151,13 +151,31 @@ const Body = styled.div`
   margin: auto;
   width: 50%;
   height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledLinks = styled.a`
+  font-size: 16px;
+  padding: 10px;
+
+  &:hover {
+    color: blue;
+    cursor: pointer;
+  }
 `;
 
 export default class LandingPage extends Component {
   render() {
     return (
       <Main>
-        <Body />
+        <Body>
+          <StyledLinks>About</StyledLinks>
+          <StyledLinks>Portfolio</StyledLinks>
+          <StyledLinks>Testimonial</StyledLinks>
+          <StyledLinks>Contact</StyledLinks>
+        </Body>
         <BackgroundWrap>
           <X1>
             <Cloud />
